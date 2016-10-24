@@ -1,33 +1,48 @@
+body {
+  font: 13px/1.5 normal Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 .cnt {
-  width: 1333px;
-  border: 1px solid #e5e5e5;
+  width: 1304px; /* make 1333 */
   background-color: #e5e5e5;
   margin: 0 auto;
+  padding: 0 140px; 
+  box-sizing: border-box;
 }
-
 header {
-  text-align: right;
-  position: relative;
+  width: 900px;
+  margin: 0 auto 30px;
 }
 
 .head_contacts {
+  text-transform: uppercase;
+  text-align: right;
   color: #767571;
-  font-family: sans-serif;
-  margin: 7px 184px;
+  font-size: 14px;
+  padding: 5px 0;
 }
 
 .logo {
-  position: absolute;
-  left: 184px;
+  width: 150px;
+  float: left;
+}
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transform: translateY(-41.6%);
 }
 
 .blue {
+  list-style: none;
   text-align: right;
-  font-family: sans-serif;
-  margin: 7px 184px;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 10px;
 }
 
-li.but {
+.blue li {
   height: 31px;
   color: white;
   background-color: #51aef3;
@@ -36,9 +51,11 @@ li.but {
   text-align: center;
   position: relative;
   margin: 0px 15px;
+  line-height: 31px;
+  min-width: 130px;
 }
 
-li.but:after {
+.blue li:after {
   content: '';
   position: absolute;
   left: -18px;
@@ -49,7 +66,7 @@ li.but:after {
   background-position: 0px 0px;
 }
 
-li.but:before {
+.blue li:before {
   content: '';
   position: absolute;
   right: -18px;
@@ -61,24 +78,94 @@ li.but:before {
   background-position: -20px 0px;
 }
 
-.sl {
-  display: inline-block;
-  color: #767571;
-  font-size: 16px;
-  margin: 7px;
+.slides {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: rgba(163,151,148,1);
+  background: -moz-linear-gradient(left, rgba(163,151,148,1) 0%, rgba(171,163,162,1) 26%, rgba(227,215,215,1) 51%, rgba(196,196,196,1) 77%, rgba(135,128,128,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(163,151,148,1)), color-stop(26%, rgba(171,163,162,1)), color-stop(51%, rgba(227,215,215,1)), color-stop(77%, rgba(196,196,196,1)), color-stop(100%, rgba(135,128,128,1)));
+  background: -webkit-linear-gradient(left, rgba(163,151,148,1) 0%, rgba(171,163,162,1) 26%, rgba(227,215,215,1) 51%, rgba(196,196,196,1) 77%, rgba(135,128,128,1) 100%);
+  background: -o-linear-gradient(left, rgba(163,151,148,1) 0%, rgba(171,163,162,1) 26%, rgba(227,215,215,1) 51%, rgba(196,196,196,1) 77%, rgba(135,128,128,1) 100%);
+  background: -ms-linear-gradient(left, rgba(163,151,148,1) 0%, rgba(171,163,162,1) 26%, rgba(227,215,215,1) 51%, rgba(196,196,196,1) 77%, rgba(135,128,128,1) 100%);
+  background: linear-gradient(to right, rgba(163,151,148,1) 0%, rgba(171,163,162,1) 26%, rgba(227,215,215,1) 51%, rgba(196,196,196,1) 77%, rgba(135,128,128,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a39794', endColorstr='#878080', GradientType=1 );
 }
 
-.slides {
-  border: solid 1px #767571;
-  border-radius: 3px;
-  background: linear-gradient(45deg, grey, white);
-  position: absolute;
-  right: 15px;
+.slides li a {
   display: block;
+  color: #767571;
+  font-size: 22px;
+  line-height: 40px;
+  text-shadow: 1px 1px 0 white;
+  text-decoration: none;
 }
 
 .whitebox {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   background-color: white;
   margin: 0 auto;
+  padding: 5px 20px 5px 40px;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
+.whitebox:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.main-nav {
+  width: 670px;
+  float: right;
+}
+.promo-text {
+  text-align: center;
+  color: #51aef3;
+}
+
+.promo-text p{
+  padding: 0;
+  margin: 0;
+}
+.promo-text__small {
+  font-size: 21px;
+}
+.promo-text__big {
+  font-size: 27px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.services__item {
+  flex: 0 0 49%;
+  height: 300px;
+  background: #E64EFF;
+  margin: 30px 0;
+}
+
+
+.group-elem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.group-elem__item {
+  flex-basis: 21%;
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 300px;
+  background: rebeccapurple;
+  margin: 0 2% 30px;
+}
+
